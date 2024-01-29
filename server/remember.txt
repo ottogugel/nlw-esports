@@ -1,0 +1,94 @@
+na pasta server cria com o npm init -y
+
+interface Ad {
+id: string;
+name: string;
+createdAd: Date;
+}
+
+function calculaHaQuantoTempoOAnuncioFoiPublicado(ad: Ad) {
+  // calculo ha quantos dias foi postado
+  ad.createdAd => '2022-06-20'
+}
+
+calculaHaQuantoTempoOAnuncioFoiPublicado({
+id: '1',
+name: 'Ad 01',
+createdAd: new Date(),
+})
+
+// localhost:3333/ads
+
+// [] - array
+// {} - objeto
+
+// HTTPS methods / API Restful / HTTP Codes
+// GET, POST, PUT, PATCH, DELETE
+
+// GET - Leitura do back-end.
+// POST - Criando algo como uma entidade
+// PUT - Estar editando alguma entidade [EDITAR NOME/EMAIL]
+// PATCH - Editar uma informação muito especifica dentro de uma entidade. [RECEBER NOTIFICAÇÕES]
+// DELETE - Remover alguma entidade do back-end.
+
+/**
+ * Query: ... // localhost:3333/ads?=page2&sort=title
+ * Route: ... // localhost:3333/ads/5 ; localhost:3333/post/como-criar-uma-api-em-node
+ * Body: ... // ele não fica na url, fica na requisição.
+ */
+
+
+
+
+// EEMAScript Model
+
+ # Back-end
+
+ ## Entidades
+
+ # Base
+
+ id
+ title
+ bannerUrl
+
+ CDN (Amazon S3) (Content Delivery Network)
+
+ ### Ad
+
+ id
+ gameId
+ name
+ yearsPlaying
+ discord
+ weekDays
+ hourStart
+ hourEnd
+ useVoiceChannel
+ createdAt
+
+0,1,2,3,4,5,6 [1,3,6] - Dias da semana (0 - Domingo)
+1:30h - 90min
+R$179,89 -> 17989
+
+Snowflake ID
+
+no package.json colocar --exit-child para restartar o node sozinho.
+
+Datas (fuso horário / formatos diferentes 110n 03-01-2022)
+Pontos flutuantes
+
+Sempre que for colocar async antes do response, request sempre colocar o
+await apos a const ex = await.
+
+/**
+* Request Body
+*/
+
+
+## Casos de Uso
+
+- Listagem de games com contagem de anúncios
+- Criação de novo anúncio
+- Listagem de anúncios por game
+- Buscar discord pelo ID do anúncio

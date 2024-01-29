@@ -1,0 +1,36 @@
+// JSX: Javascript + XML (HTML)
+// Componentes / Propriedades
+
+* Componente é sempre uma função com o nome sempre com a letra Maiscula e que retorna um conjunto de tags HTML. Quando esse HTML vai ter mais uma de linha, eu posso quebrar ele.
+
+// <img src=""
+
+interface ButtonProps {
+  title: string;
+}
+
+function Button(props: ButtonProps) {
+  return (
+    <button>
+    {props.title}//enviar
+    </button>
+  )
+}
+
+function App() {
+  return (
+    <div>
+    <Button title="Send 1" />
+    <Button title="Send 2" />
+    <Button title="Send 3" />
+    </div>
+  )
+}
+
+// npx - executar alguma biblioteca que a gente já tenha instalado em nosso projeto.
+
+// método map. que ele consegue percorrer um array no js, e retornar algo dentro dele.
+
+// chamada api fetch - toda vez que o componente for renderizar e atualizar ~ renderizações no react
+
+// usar axios em vez do fetch

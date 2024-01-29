@@ -1,0 +1,17 @@
+🩹 Melhorias necessárias
+O projeto foi totalmente desenvolvido conforme as orientações dos instrutores, sem adicionais. Futuramente, podem ser implementadas as seguintes sugestões:
+
+A fazer:
+
+- Responsividade mobile na aplicação web;
+- Criação de um carrossel, caso tenhamos mais jogos cadastrados no back-end - (sugestão de um cara no discord)
+- Substituir o select padrão do HTML pelo select do Radix-UI; ✅
+- Substituir o checkbox padrão do HTML pelo checkbox do Radix-UI; ✅
+- Substituir o button padrão do HTML pelo togglegroup do Radix-UI; ✅
+- Validação do formulário com React Hook Form;
+- Autenticação com o Discord, que preencheria automaticamente o campo do Discord no formulário.
+
+Feito:
+- Substituir o checkbox padrão do HTML pelo checkbox do Radix-UI;
+- Substituir o select padrão do HTML pelo select do Radix-UI;
+- Substituir o button padrão do HTML pelo togglegroup do Radix-UI;
