@@ -15,6 +15,7 @@ interface Game {
 }
 
 export function CreateAdModal() {
+
   const [games, setGames] = useState<Game[]>([]);
   const [currentGame, setCurrentGame] = useState("");
   const [weekDays, setWeekDays] = useState<string[]>([]);
@@ -59,9 +60,7 @@ export function CreateAdModal() {
       <Dialog.Overlay className="bg-black/60 inset-0 fixed" />
 
       <Dialog.Content className="fixed bg-[#2A2634] py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25">
-        <Dialog.Title className="text-3xl font-black">
-          Publish ad
-        </Dialog.Title>
+        <Dialog.Title className="text-3xl font-black">Publish ad</Dialog.Title>
 
         <form onSubmit={handleCreateAd} className="mt-8 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -87,6 +86,11 @@ export function CreateAdModal() {
               <Select.Portal>
                 <Select.Content>
                   <Select.Viewport className="bg-zinc-900 py-3 px-4 rounded text-sm cursor-pointer text-zinc-400">
+                    <Select.Group>
+                      <Select.Label className="text-zinc-600">
+                        Choose the game you want to play
+                      </Select.Label>
+                    </Select.Group>
                     {games.map((game) => {
                       return (
                         <Select.Item
@@ -112,8 +116,8 @@ export function CreateAdModal() {
           <div className="flex flex-col gap-2">
             <label htmlFor="name">Your name (or nickname)</label>
             <Input
-              name="name"
               id="name"
+              name="name"
               placeholder="What do they call you in the game?"
             />
           </div>

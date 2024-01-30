@@ -4,14 +4,19 @@ O projeto foi totalmente desenvolvido conforme as orientações dos instrutores,
 A fazer:
 
 - Responsividade mobile na aplicação web;
-- Criação de um carrossel, caso tenhamos mais jogos cadastrados no back-end - (sugestão de um cara no discord)
+- Criação de um carrossel, caso tenhamos mais jogos cadastrados no back-end - (sugestão de um cara no discord) ✅
 - Substituir o select padrão do HTML pelo select do Radix-UI; ✅
 - Substituir o checkbox padrão do HTML pelo checkbox do Radix-UI; ✅
 - Substituir o button padrão do HTML pelo togglegroup do Radix-UI; ✅
 - Validação do formulário com React Hook Form;
-- Autenticação com o Discord, que preencheria automaticamente o campo do Discord no formulário.
+- Autenticação com o Discord, que preencheria automaticamente o campo do Discord no formulário. (Oauth Discord/Twitch)
+- Abrir um modal ao clicar em um cardGame na aplicação web pra mostrar os anúncios listados
+- Loading ao enviar os dados(Mostrar mensagem do error/ok) e recarregar os games para mostrar que o anuncio foi criado
+- Push Notification melhorada(ex: quando alguem cadastrar que joga lol ou qual quer outro game e a pessoa marcou interesse no lol recebe uma notificação via discord(Oauth no back-end)/push notification que alguem cadastrou um anuncio no lol. Ou seja uma verificação no back-end)
+- Modal para cadastrar novos anúncios
 
 Feito:
 - Substituir o checkbox padrão do HTML pelo checkbox do Radix-UI;
 - Substituir o select padrão do HTML pelo select do Radix-UI;
 - Substituir o button padrão do HTML pelo togglegroup do Radix-UI;
+- Criação de um carrossel, caso tenhamos mais jogos cadastrados no back-end - (sugestão de um cara no discord)
