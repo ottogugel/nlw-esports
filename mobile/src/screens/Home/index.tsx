@@ -21,7 +21,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch('http://192.168.0.100:3333/games')
+    fetch('http://192.168.15.7:3333/games')
       .then(response => response.json())
       .then(data => setGames(data))
   }, []);
@@ -29,24 +29,18 @@ export function Home() {
   return (
     <Background>
       <SafeAreaView style={styles.container}>
-        <Image
-          source={logoImg}
-          style={styles.logo}
-        />
+        <Image source={logoImg} style={styles.logo} />
 
         <Heading
-          title="Encontre seu duo!"
-          subtitle="Selecione o game que deseja jogar..."
+          title="Find your duo!"
+          subtitle="Choose the game you want to play..."
         />
 
         <FlatList
           data={games}
-          keyExtractor={item => item.id}
+          keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <GameCard
-              data={item}
-              onPress={() => handleOpenGaming(item)}
-            />
+            <GameCard data={item} onPress={() => handleOpenGaming(item)} />
           )}
           showsHorizontalScrollIndicator={false}
           horizontal

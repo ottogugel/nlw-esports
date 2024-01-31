@@ -29,13 +29,13 @@ export function Game() {
   }
 
   async function getDiscordUser(adsId: string) {
-    fetch(`http://192.168.0.100:3333/ads/${adsId}/discord`)
+    fetch(`http://192.168.15.7:3333/ads/${adsId}/discord`)
       .then(response => response.json())
       .then(data => setDiscordDuoSelected(data.discord))
   }
 
   useEffect(() => {
-    fetch(`http://192.168.0.100:3333/games/${game.id}/ads`)
+    fetch(`http://192.168.15.7:3333/games/${game.id}/ads`)
       .then(response => response.json())
       .then(data => setDuos(data))
   }, []);
@@ -52,10 +52,7 @@ export function Game() {
             />
           </TouchableOpacity>
 
-          <Image
-            source={logoImg}
-            style={styles.logo}
-          />
+          <Image source={logoImg} style={styles.logo} />
 
           <View style={styles.right} />
         </View>
@@ -66,35 +63,29 @@ export function Game() {
           resizeMode="cover"
         />
 
-        <Heading
-          title={game.title}
-          subtitle="Conecte-se e comece a jogar!"
-        />
+        <Heading title={game.title} subtitle="Connect and start playing!" />
 
         <FlatList
           data={duos}
-          keyExtractor={item => item.id}
+          keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <DuoCard
-              data={item}
-              onConnect={() => getDiscordUser(item.id)}
-            />
+            <DuoCard data={item} onConnect={() => getDiscordUser(item.id)} />
           )}
           horizontal
           style={styles.containerList}
-          contentContainerStyle={[duos.length > 0 ? styles.contentList : styles.emptyListContent ]}
+          contentContainerStyle={[
+            duos.length > 0 ? styles.contentList : styles.emptyListContent,
+          ]}
           showsHorizontalScrollIndicator
           ListEmptyComponent={
-            <Text style={styles.emptyListText}>
-              Não há anúncios publicados ainda.
-            </Text>
+            <Text style={styles.emptyListText}>No ads published yet.</Text>
           }
         />
 
         <DuoMatch
           visible={discordDuoSelected.length > 0}
           discord={discordDuoSelected}
-          onClose={() => setDiscordDuoSelected('')}
+          onClose={() => setDiscordDuoSelected("")}
         />
       </SafeAreaView>
     </Background>
