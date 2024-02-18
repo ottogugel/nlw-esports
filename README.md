@@ -3,7 +3,7 @@
 <h1 align="center"> <img alt="nlw-logo" src="/web/src/assets/logo-nlw-esports.svg" /> </h1>
 
 No NLW eSports foi desenvolvido uma plataforma web e mobile onde Gamers podem encontrar parceiros para seus jogos favoritos.
- 
+
 ![cover](.github/cover.png?style=flat)
 
 ## :rocket: Tecnologias
@@ -17,6 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Expo](https://docs.expo.dev/)
 - [Express](https://expressjs.com/pt-br)
 - [Prisma](https://www.prisma.io/)
+- [Sonner](https://sonner.emilkowal.ski/)
 
 ## :computer: Projeto
 

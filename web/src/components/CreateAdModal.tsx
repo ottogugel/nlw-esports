@@ -1,3 +1,4 @@
+import { toast } from 'sonner'
 import { CaretDown, Check, GameController } from "phosphor-react";
 
 import * as Dialog from '@radix-ui/react-dialog';
@@ -33,8 +34,8 @@ export function CreateAdModal() {
     const formData = new FormData(event.target as HTMLFormElement);
     const data = Object.fromEntries(formData);
 
-    if (!data.name) {
-      return;
+    if (data.name === '') {
+      toast.error("")
     }
 
     try {
@@ -48,10 +49,10 @@ export function CreateAdModal() {
         useVoiceChannel: useVoiceChannel,
       });
 
-      alert("Ad created successfully!");
+      toast.success("Ad created successfully!");
     } catch (err) {
       console.log(err);
-      alert("Error creating ad!");
+      toast.error("Error creating ad!");
     }
   }
 
@@ -124,7 +125,9 @@ export function CreateAdModal() {
 
           <div className="grid grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
-              <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
+              <label htmlFor="yearsPlaying">
+                How many years have you played?
+              </label>
               <Input
                 name="yearsPlaying"
                 id="yearsPlaying"
